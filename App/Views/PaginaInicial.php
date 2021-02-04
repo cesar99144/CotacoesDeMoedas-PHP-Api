@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="<?php echo URL_BASE; ?>Assets/css/paginaInicial.css">
@@ -7,7 +7,13 @@
         <title>Home</title>
     </head>
     <body>
-        
-        <?php require_once 'App/Views/'.$view.'.php'; ?>
+        <section id="title">
+            <h1 id="text-title">Cotações de moedas</h1>
+        </section>
+        <section id="conteudo">
+            <div class="conteudo-form">
+                <?php require_once 'App/Views/'.$view.'.php'; ?>
+            </div>
+        </section>
     </body>
 </html>

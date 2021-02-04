@@ -1,0 +1,55 @@
+.formulario{
+
+   width: 400px;
+   margin-top: 20px;
+}
+
+.text-title{
+
+    margin-top: 30px;
+}
+
+label{
+
+    font-size: 15pt;
+    font-family: fantasy;
+}
+
+.text-input{
+
+    margin-top: 10px;
+}
+
+.input-valor{
+
+    width: 350px;
+    font-size: 15pt;
+    padding: 5px;
+}
+
+.buttons{
+
+    margin-top: 25px;
+}
+
+.butoes-estilo{
+
+    font-size: 12pt;
+    color: white;
+    font-weight: bold;
+    border: none;
+    width: 360px;
+    padding: 5px;
+}
+
+input#butaoEntrar{
+
+    background: blue;
+}
+
+a#butaoCadastrar{
+
+    text-decoration: none;
+    background: red;
+   
+}
