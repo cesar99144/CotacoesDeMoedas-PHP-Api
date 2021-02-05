@@ -25,7 +25,7 @@
                         <input class="butoes-estilo" id="butaoEntrar" type="submit" value="Entrar">
                     </div>
                     <div class="buttons">
-                        <a class="butoes-estilo" href="#" id="butaoCadastrar">Criar conta</a>
+                        <a class="butoes-estilo" href="<?php echo URL_BASE; ?>usuario/cadastro" id="butaoCadastrar">Criar conta</a>
                     </div>
                 </div>
             </form>
