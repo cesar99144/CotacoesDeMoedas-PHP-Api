@@ -9,7 +9,7 @@
         <form action="<?php echo URL_BASE; ?>home/index" method="POST">
             <div class="form-group">
                 <label>Email</label>
-                <input type="email" class="form-control" name="emailLogin" placeholder="User Name">
+                <input type="email" class="form-control" name="emailLogin" placeholder="Email">
             </div>
             <div class="form-group">
                 <label>Senha</label>

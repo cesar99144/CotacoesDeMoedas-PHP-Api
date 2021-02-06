@@ -1,0 +1,100 @@
+*{
+    margin: 0px;
+}
+
+header{
+
+    display: flex;
+    justify-content: space-between;
+    background: black;
+    padding: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+a#butaoSair{
+
+    color: white;
+    background: red;
+    text-decoration: none;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.text{
+
+    color: white;
+    font-size: 15pt;
+    font-family: -apple-system;
+}
+
+section{
+
+    display: flex;
+}
+
+aside{
+
+    box-shadow: 5px 0px 0px 0px rgba(19, 17, 17, 0.1);
+    width: 250px;
+    height: 563px;
+    padding-top: 2%;
+    background: rgba(0,0,0,0.1);
+    
+}
+
+.conteudo{
+
+    padding: 20px;
+}
+
+nav#menu h3{
+
+    margin-left: 10%;
+    font-size: 15pt;
+}
+
+nav#menu ul{
+
+    list-style-type: none;
+    margin-left: -7%;
+}
+
+nav#menu li{
+
+    margin-top: 10%;
+    font-size: 13pt;
+
+}
+
+nav#menu a{
+
+    text-decoration: none;
+    color: blue;
+}
+
+nav#perfil h3{
+
+    margin-left: 10%;
+    font-size: 15pt;
+    margin-top: 10%;
+}
+
+nav#perfil ul{
+
+    list-style-type: none;
+    margin-left: -7%;
+}
+
+nav#perfil li{
+
+    margin-top: 10%;
+    font-size: 13pt;
+
+}
+
+nav#perfil a{
+
+    text-decoration: none;
+    color: blue;
+}

@@ -38,10 +38,12 @@ class Usuario extends Controller{
         $this->view('home/cadastrar');
     }
 
-    public function feed(){
+    public function dashboard(){
 
        Acesso::checkLogin();
 
-       $this->viewUsuario('usuario/feed');
+       $this->viewDash('moedas/cotacoesFavoritas');
     }
+
+
 }

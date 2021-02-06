@@ -14,8 +14,8 @@ class Controller {
         require_once 'App/Views/PaginaInicial.php';
     }
 
-    public function viewUsuario($view, $data = []){
+    public function viewDash($view, $data = []){
 
-        require_once 'App/Views/'.$view.'.php';
+        require_once 'App/Views/usuario/dashboard.php';
     }
 }

@@ -23,7 +23,7 @@ class Acesso{
            	  $_SESSION['userId'] = $resultado['id'];
            	  $_SESSION['userNome'] = $resultado['nome'];
               
-           	  header('Location: /usuario/feed');
+           	  header('Location: /usuario/dashboard');
            else:
            	  return "Senha invalida";
            endif;
