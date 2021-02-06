@@ -7,11 +7,6 @@ class Home extends Controller{
 
 	public function index(){
 
-		$this->view('home/login');
-	}
-	
-	public function login(){
-
 		if(isset($_POST['entrar'])):
             
             if(!empty($_POST['emailLogin']) && !empty($_POST['senhaLogin'])):
@@ -35,10 +30,17 @@ class Home extends Controller{
 
         endif;
 
+		$this->view('home/login');
+	}
+	
+	public function login(){
+
+		
+
 	}
 
 	public function logout(){
 
-		Acesso::logout();
+		Acesso::Logout();
 	}
 }

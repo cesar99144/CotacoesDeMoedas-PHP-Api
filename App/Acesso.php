@@ -47,7 +47,7 @@ class Acesso{
     public static function Logout(){
 
         session_destroy();
-        header('Location: /home/login');
+        header('Location: /home/index');
 
     }
 
