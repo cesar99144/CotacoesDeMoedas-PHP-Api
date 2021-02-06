@@ -1,6 +1,7 @@
 <?php
 
 use App\Core\Controller;
+use App\Acesso;
 
 class Usuario extends Controller{
 
@@ -8,7 +9,7 @@ class Usuario extends Controller{
 
         $mensagem = array();
 
-        if(isset($_POST['nome'])):
+        if(isset($_POST['cadastrar'])):
             
             if(!empty($_POST['nome']) && !empty($_POST['email']) && !empty($_POST['senha'])):
               
@@ -35,5 +36,12 @@ class Usuario extends Controller{
         endif;
 
         $this->view('home/cadastrar');
+    }
+
+    public function feed(){
+
+       Acesso::checkLogin();
+
+       $this->viewUsuario('usuario/feed');
     }
 }

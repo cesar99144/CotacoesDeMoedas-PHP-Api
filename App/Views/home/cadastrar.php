@@ -28,7 +28,7 @@
                 </div>
                 <div class="buttons-form">
                     <div class="buttons">
-                        <input class="butoes-estilo" id="butaoEntrar" type="submit" value="Cadastrar">
+                        <input class="butoes-estilo" id="butaoEntrar" type="submit" name="cadastrar" value="Cadastrar  ">
                     </div>
                     <?php 
   

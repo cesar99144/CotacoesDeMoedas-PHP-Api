@@ -7,26 +7,37 @@
     </head>
     <body>
         <div class="formulario">
-            <form action="" method="POST">
+            <form action="<?php echo URL_BASE; ?>home/login" method="POST">
                 <div class="text-title">
                    <label for="">Email</label>
                 </div>
                 <div class="text-input">
-                   <input class="input-valor" type="email" name="email" >
+                   <input class="input-valor" type="email" name="emailLogin" >
                 </div>
                 <div class="text-title">
                    <label for="">Senha</label>
                 </div>
                 <div class="text-input">
-                   <input class="input-valor" type="password" name="email" >
+                   <input class="input-valor" type="password" name="senhaLogin" >
                 </div>
                 <div class="buttons-form">
                     <div class="buttons">
-                        <input class="butoes-estilo" id="butaoEntrar" type="submit" value="Entrar">
+                        <input class="butoes-estilo" id="butaoEntrar" type="submit" name="entrar" value="Entrar">
                     </div>
                     <div class="buttons">
                         <a class="butoes-estilo" href="<?php echo URL_BASE; ?>usuario/cadastro" id="butaoCadastrar">Criar conta</a>
                     </div>
+                    <?php 
+                        //Exibe mensagens de validação para o usuário
+                        if(!empty($data['mensagem'])):
+
+                            foreach($data['mensagem'] as $m):
+                                echo $m."<br>";
+                            endforeach;
+
+                        endif;
+
+                    ?>
                 </div>
             </form>
         </div>
