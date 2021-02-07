@@ -7,7 +7,10 @@ class Moeda extends Controller{
 
     public function gerais(){
 
-        $this->viewDash('moedas/cotacoesGerais');
+        $moedas = $this->model('MoedasDao');
+        $dados = $moedas->cotacoesGerais();
+
+        $this->viewDash('moedas/cotacoesGerais', $dados = ['gerais' => $dados]);
     }
 
     public function favoritas(){
