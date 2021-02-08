@@ -7,6 +7,8 @@ class Moeda extends Controller{
 
     public function gerais(){
 
+    	Acesso::checkLogin();
+
         $moedas = $this->model('MoedasDao');
         $dados = $moedas->cotacoesGerais();
 
@@ -15,14 +17,25 @@ class Moeda extends Controller{
 
     public function favoritas(){
 
+    	Acesso::checkLogin();
+
         $this->viewDash('moedas/cotacoesFavoritas');
     }
 
-    public function adicionarFav(){
+    public function listaAdicionarFav(){
+
+    	Acesso::checkLogin();
 
     	$moedas = $this->model('MoedasDao');
         $dados = $moedas->listaAdicionarMoedasFavoritas();
 
         $this->viewDash('moedas/listaAddFav', $dados = ['listAddFav' => $dados]);
+    }
+
+    public function adicionarFav($moeda){
+
+    	Acesso::checkLogin();
+
+    	echo $moeda;
     }
 }

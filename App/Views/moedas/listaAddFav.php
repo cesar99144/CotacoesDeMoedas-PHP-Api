@@ -7,7 +7,7 @@
   </tr>
   <?php foreach ($data['listAddFav'] as $moeda): ?>
   	<tr>
-	    <td><a href="<?php echo $moeda->code; ?>"><?php echo $moeda->name; ?></a></td>
-	    <td><a class="button-add" href="#">Adicionar</a></td>
+	    <td><a><?php echo $moeda->name; ?></a></td>
+	    <td><a class="button-add" href="<?php echo URL_BASE; ?>moeda/adicionarFav/<?php echo $moeda->code; ?>">Adicionar</a></td>
   <?php endforeach; ?>
 </table>
