@@ -2,7 +2,6 @@
 
 <table>
   <tr>
-  	<th>Pais</th>
     <th>Moeda</th>
     <th>Valor de compra</th>
     <th>Valor de venda</th>
@@ -12,7 +11,6 @@
   </tr>
   <?php foreach ($data['gerais'] as $moeda): ?>
     <tr>
-	  	<td></td>
 	    <td><a href="<?php echo $moeda->code; ?>"><?php echo $moeda->name; ?></a></td>
 	    <td><?php echo $moeda->bid;?></td>
 	    <td><?php echo $moeda->ask;?></td>

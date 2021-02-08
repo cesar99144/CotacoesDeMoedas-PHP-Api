@@ -17,4 +17,12 @@ class Moeda extends Controller{
 
         $this->viewDash('moedas/cotacoesFavoritas');
     }
+
+    public function adicionarFav(){
+
+    	$moedas = $this->model('MoedasDao');
+        $dados = $moedas->listaAdicionarMoedasFavoritas();
+
+        $this->viewDash('moedas/listaAddFav', $dados = ['listAddFav' => $dados]);
+    }
 }
