@@ -36,6 +36,22 @@ class Moeda extends Controller{
 
     	Acesso::checkLogin();
 
-    	echo $moeda;
+    	$mensagem = array();
+
+    	$MoedasDao = $this->model('MoedasDao');
+
+    	$buscaIdMoeda = $MoedasDao->buscarMoedaEspecifica($moeda);
+
+    	$moeda = $this->model('Moedas');
+    	$moeda->setUsuario($_SESSION['userId']);
+    	$moeda->setMoedaId($buscaIdMoeda);
+
+    	$mensagem[] = $MoedasDao->adicionarMoedaFavorita($moeda);
+    	
+    	//Carregar informações das moedas
+
+        $dados = $MoedasDao->listaAdicionarMoedasFavoritas();
+
+    	$this->viewDash('moedas/listaAddFav', $dados = ['listAddFav' => $dados, 'mensagem' => $mensagem]);
     }
 }

@@ -1,5 +1,18 @@
 <link rel="stylesheet" href="<?php echo URL_BASE; ?>Assets/css/adicionarFavorita.css">
 
+<?php 
+    //Exibe mensagens de validação para o usuário
+    if(!empty($data['mensagem'])):
+
+        foreach($data['mensagem'] as $m):
+            echo $m."<br>";
+        endforeach;
+
+    endif;
+
+?>
+
+
 <table>
   <tr>
     <th>Moeda</th>
