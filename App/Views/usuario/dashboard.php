@@ -23,12 +23,10 @@
                 <nav id="menu">
                     <h3>Menu geral</h3>
                    <ul>
-                     <li><a href="<?php echo URL_BASE; ?>moeda/favoritas">Cotações moedas favoritas</a></li>
+                     <li><a href="<?php echo URL_BASE; ?>moeda/especificas">Cotações moedas específicas</a></li>
                      <li><a href="<?php echo URL_BASE; ?>moeda/gerais">Cotações gerais</a></li>
                      <li><a href="">Fechamento últimos dias</a></li>
                      <li><a href="">Fechamento período específico</a></li>
-                     <li><a href="<?php echo URL_BASE; ?>moeda/listaAdicionarFav">Adicionar moeda aos favoritos</a></li>
-                     
                    </ul>
                 </nav>
                 <nav id="perfil">
