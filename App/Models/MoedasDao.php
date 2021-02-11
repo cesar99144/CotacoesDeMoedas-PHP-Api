@@ -17,6 +17,9 @@ class MoedasDao extends Model{
         return $moedas;
     }
 
-    
+    public function cotacoesMoedaEspecifica($moeda){
+
+        
+    }
 
 }

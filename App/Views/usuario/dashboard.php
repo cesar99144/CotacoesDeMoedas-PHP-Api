@@ -29,14 +29,6 @@
                      <li><a href="">Fechamento período específico</a></li>
                    </ul>
                 </nav>
-                <nav id="perfil">
-                   <h3>Perfil</h3>
-                   <ul>
-                       <li><a href="#">Vizualizar perfil</a></li>
-                       <li><a href="#">Editar perfil</a></li>
-                       <li><a href="#">Excluir conta</a></li>
-                   </ul>
-                </nav>
             </aside>
             <div class="conteudo">
                 <?php require_once 'App/Views/'.$view.'.php'; ?>

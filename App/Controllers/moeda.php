@@ -17,7 +17,9 @@ class Moeda extends Controller{
 
     public function especificas(){
 
-    	
+    	Acesso::checkLogin();
+
+    	$this->viewDash('moedas/cotacoesEspecificas');
     }
 
     
