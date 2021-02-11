@@ -29,3 +29,11 @@ a{
   background: green;
   padding: 5px;
 }
+
+.button-remove{
+
+  text-decoration: none;
+  color: white;
+  background: red;
+  padding: 5px;
+}

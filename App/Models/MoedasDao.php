@@ -17,7 +17,7 @@ class MoedasDao extends Model{
         return $moedas;
     }
 
-    public function listaAdicionarMoedasFavoritas(){
+    public function listaOpcoesMoedas(){
 
     	$url = "https://economia.awesomeapi.com.br/json/all";
 
@@ -48,6 +48,20 @@ class MoedasDao extends Model{
     	}
     }
 
+    public function listaDeTodasMoedas(){
+
+        $query = "SELECT * FROM moedas";
+        $stmt = self::getConn()->prepare($query);
+        $stmt->execute();
+
+        if($stmt->rowCount() > 0){
+
+            $resultado = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+
+            return $resultado;
+        }
+    }
+
     public function adicionarMoedaFavorita(Moedas $m){
 
         $query = "INSERT INTO favoritas (usuario, moeda) VALUES (?, ?)";
@@ -63,6 +77,26 @@ class MoedasDao extends Model{
 
         	//return "Erro ao adicionar";
         	print_r($stmt->errorInfo());
+        }
+    }
+
+    public function buscaFavoritasUsuario($id){
+
+        //$query = "SELECT moeda FROM favoritas where usuario = ?";
+        $query = "SELECT moedas.codigo, moedas.nome FROM favoritas JOIN moedas on moedas.id = favoritas.moeda WHERE favoritas.usuario = ?";
+        $stmt = self::getConn()->prepare($query);
+        $stmt->bindvalue(1, $id);
+        $stmt->execute();
+
+        if($stmt->rowCount() > 0){
+
+            $resultado = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+
+            return $resultado;
+
+        }else{
+
+            return [];
         }
     }
 }

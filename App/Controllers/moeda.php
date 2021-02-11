@@ -27,9 +27,14 @@ class Moeda extends Controller{
     	Acesso::checkLogin();
 
     	$moedas = $this->model('MoedasDao');
-        $dados = $moedas->listaAdicionarMoedasFavoritas();
+        //$dados = $moedas->listaAdicionarMoedasFavoritas();
+        $dados = $moedas->listaOpcoesMoedas();
 
-        $this->viewDash('moedas/listaAddFav', $dados = ['listAddFav' => $dados]);
+        //Carrega moedas já adicionadas pelo usuário
+
+        $moedasFav = $moedas->buscaFavoritasUsuario($_SESSION['userId']);
+
+        $this->viewDash('moedas/listaAddFav', $dados = ['listAddFav' => $dados, 'moedasFavoritas' => $moedasFav]);
     }
 
     public function adicionarFav($moeda){
