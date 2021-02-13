@@ -22,3 +22,72 @@ a{
 	text-decoration: none;
 	color: black;
 }
+
+.card-moeda{
+
+  width: 100%;
+  margin: auto;
+  margin-top: 2rem;
+  margin-left: 3rem;
+
+}
+
+.dados-moedas{
+
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 1px 0px 5px 1px black;
+}
+
+label{
+
+
+}
+
+.info{
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.moeda-name{
+
+  margin-left: 1rem;
+}
+
+.informa-conversao{
+
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+
+.dados-colunas{
+
+  display: flex;
+  margin-top: 1rem;
+}
+
+.coluna{
+
+  border: 1px solid black;
+  margin-left: 1rem;
+  height: 5rem;
+  padding: 10px;
+}
+
+.text-titulo{
+
+  border-bottom: 1px solid black;
+}
+
+.text-desc{
+
+  margin-top: 1rem;
+}
+
+.valor-text{
+
+  font-size: 15pt;
+
+}

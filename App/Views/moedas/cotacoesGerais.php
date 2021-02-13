@@ -1,22 +1,62 @@
 <link rel="stylesheet" href="<?php echo URL_BASE; ?>Assets/css/cotacoesGerais.css">
 
-<table>
-  <tr>
-    <th>Moeda</th>
-    <th>Valor de compra</th>
-    <th>Valor de venda</th>
-    <th>Variação</th>
-    <th>Máximo</th>
-    <th>mínimo</th>
-  </tr>
-  <?php foreach ($data['gerais'] as $moeda): ?>
-    <tr>
-	    <td><a href="<?php echo $moeda->code; ?>"><?php echo $moeda->name; ?></a></td>
-	    <td><?php echo $moeda->bid;?></td>
-	    <td><?php echo $moeda->ask;?></td>
-	    <td><?php echo $moeda->pctChange;?></td>
-	    <td><?php echo $moeda->high;?></td>
-	    <td><?php echo $moeda->low;?></td>
-	</tr>
-  <?php endforeach; ?>
-</table>
+<?php foreach($data['gerais'] as $busca): ?>
+      <section class="card-moeda">
+        <div class="dados-moedas">
+          <div class="info">
+            <div class="moeda-name">
+                <h3><?php echo $busca->name; ?></h3>
+             </div>
+             <div class="data">
+                <label class="valor-text"><?php echo $busca->create_date; ?></label>
+             </div>
+          </div>
+          <div class="informa-conversao">
+             <label class="valor-text">Em real:</label>
+          </div>
+           <div class="dados-colunas">
+              <div class="coluna">
+                <div class="text-titulo">
+                   <h3>Valor de compra</h3>
+                </div>
+                <div class="text-desc">
+                   <label class="valor-text">R$ <?php $vCompra = number_format($busca->bid, 2, '.', ''); echo $vCompra; ?></label>
+                </div>
+              </div> 
+              <div class="coluna">
+                 <div class="text-titulo">
+                  <h3>Valor de venda</h3>
+                 </div>
+                 <div class="text-desc">
+                  <label class="valor-text">R$ <?php $valorVenda = number_format($busca->ask, 2, '.', ''); echo $valorVenda; ?></label>
+                 </div>
+              </div>
+              <div class="coluna">
+                <div class="text-titulo">
+                   <h3>Variação</h3>
+                </div>
+                <div class="text-desc">
+                   <label class="valor-text">R$ <?php echo $busca->pctChange; ?></label>
+                </div>
+              </div> 
+              <div class="coluna">
+                 <div class="text-titulo">
+                  <h3>Máximo</h3>
+                 </div>
+                 <div class="text-desc">
+                  <label class="valor-text">R$ <?php $maximo = number_format($busca->high, 2, '.', ''); echo $maximo; ?></label>
+                 </div>
+              </div>
+              <div class="coluna">
+                 <div class="text-titulo">
+                  <h3>Mínimo</h3>
+                 </div>
+                 <div class="text-desc">
+                  <label class="valor-text">R$ <?php $minimo= number_format($busca->low, 2, '.', ''); echo $minimo; ?></label>
+                 </div>
+              </div>
+              
+           </div>
+        </div>
+      </section>
+    <?php endforeach; ?>
