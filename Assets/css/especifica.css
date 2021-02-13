@@ -35,3 +35,31 @@
 	border: none;
 
 }
+
+.card-moeda{
+
+  width: 700px;
+  margin: auto;
+  margin-top: 2rem;
+  margin-left: 3rem;
+
+}
+
+.dados-moedas{
+
+  width: 70%;
+  padding: 1rem;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 1px 0px 5px 1px black;
+}
+
+label{
+
+
+}
+
+.dados-colunas{
+
+	display: flex;
+}
+

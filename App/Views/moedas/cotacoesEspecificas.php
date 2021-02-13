@@ -12,13 +12,18 @@
 
 	<?php if(isset($_POST['codigoMoeda'])): ?>
 
-		<?php var_dump($data['MoedaEspecifica']); ?>
+		<?php //var_dump($data['MoedaEspecifica']); ?>
 
 		<?php foreach($data['MoedaEspecifica'] as $busca): ?>
-			<section>
-				Moeda: <?php echo $busca->code; ?>
-			
-
+			<section class="card-moeda">
+				<div class="dados-moedas">
+				   <div class="moeda-name">
+				   	  <label><?php echo $busca->name; ?></label>
+				   </div>
+				   <div class="dados-colunas">
+				   	  
+				   </div>
+				</div>
 			</section>
 		<?php endforeach; ?>
 
