@@ -19,7 +19,10 @@ class Moeda extends Controller{
 
     	Acesso::checkLogin();
 
-    	$this->viewDash('moedas/cotacoesEspecificas');
+        $moedas = $this->model('MoedasDao');
+        $dados = $moedas->cotacoesGerais();
+
+    	$this->viewDash('moedas/cotacoesEspecificas', $dados = ['todasMoedas' => $dados]);
     }
 
     
