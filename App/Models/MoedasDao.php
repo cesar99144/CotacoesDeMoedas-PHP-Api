@@ -19,6 +19,15 @@ class MoedasDao extends Model{
 
     public function cotacoesMoedaEspecifica($moeda){
 
+        $url = "https://economia.awesomeapi.com.br/all/".$moeda;
+
+        $processaCurl = curl_init($url);
+        curl_setopt($processaCurl, CURLOPT_RETURNTRANSFER, true); 
+        curl_setopt($processaCurl, CURLOPT_SSL_VERIFYPEER, false);
+
+        $moeda = json_decode(curl_exec($processaCurl));
+
+        return $moeda;
         
     }
 

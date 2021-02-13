@@ -22,8 +22,18 @@ class Moeda extends Controller{
         $moedas = $this->model('MoedasDao');
         $dados = $moedas->cotacoesGerais();
 
+        if(isset($_POST['codigoMoeda'])):
+
+            $moedaBusca = $moedas->cotacoesMoedaEspecifica($_POST['codigoMoeda']);
+
+            $this->viewDash('moedas/cotacoesEspecificas', $dados = ['todasMoedas' => $dados, 'MoedaEspecifica' => $moedaBusca]);
+
+        endif;
+
     	$this->viewDash('moedas/cotacoesEspecificas', $dados = ['todasMoedas' => $dados]);
     }
+
+
 
     
 
