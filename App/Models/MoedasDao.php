@@ -31,4 +31,17 @@ class MoedasDao extends Model{
         
     }
 
+    public function fechamentoPorDias($moedas, $intervaloDias){
+
+        $url = "https://economia.awesomeapi.com.br/json/daily/".$moedas."/".$intervaloDias;
+
+        $processaCurl = curl_init($url);
+        curl_setopt($processaCurl, CURLOPT_RETURNTRANSFER, true); 
+        curl_setopt($processaCurl, CURLOPT_SSL_VERIFYPEER, false);
+
+        $moeda = json_decode(curl_exec($processaCurl));
+
+        return $moeda;
+    }
+
 }
