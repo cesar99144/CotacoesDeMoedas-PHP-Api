@@ -26,8 +26,8 @@
                      <li><a href="<?php echo URL_BASE; ?>moeda/gerais">Cotações gerais</a></li>
                      <li><a href="<?php echo URL_BASE; ?>moeda/especificas">Cotações moedas específicas</a></li>
                      <li><a href="<?php echo URL_BASE; ?>moeda/fechamento">Fechamento últimos dias</a></li>
-                     <li><a href="">Fechamento período específico</a></li>
-                     <li><a href="">Conversor de moeda</a></li>
+                     <li><a href="<?php echo URL_BASE; ?>moeda/fechamentoData">Fechamento período específico</a></li>
+                     <li><a href="#">Conversor de moeda</a></li>
                    </ul>
                 </nav>
             </aside>

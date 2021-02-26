@@ -2,13 +2,13 @@
 
 <label id="titulo">Fechamento por dias: </label>
 <div class="formulario">
-	<form class="form-busca" action="<?php echo URL_BASE; ?>moeda/fechamento" method="POST">
+	<form class="form-busca" action="<?php echo URL_BASE; ?>moeda/fechamentoData" method="POST">
 		<select class="moeda-busca" name="codigoMoedaEspecifica">
 			<?php foreach($data['todasMoedas'] as $moedas): ?>
 				<option value="<?php echo $moedas->code; ?>"><?php echo $moedas->name; ?></option>
 			<?php endforeach; ?>
 		</select><br>
-      <input type="number" id="intervaloDias" placeholder="Buscar nos ultimos dias exemplo: 15" name="numeroDias">
+      <label>Começo </label><input type="date" name="comeco"> <label>Fim</label> <input type="date" name="fim">
       <button class="butao-bsucar" name="buscar" type="submit"><span class="sr-only">Buscar</span></button>
     </form>
 
@@ -16,7 +16,7 @@
 
 <?php //var_dump($data['MoedaEspecifica']); ?>
 
-<?php foreach($data['MoedaEspecifica'] as $busca): ?>
+<?php foreach($data['fechamento'] as $busca): ?>
      <section class="card-moeda">
 <div class="dados-moedas">
   <div class="info">

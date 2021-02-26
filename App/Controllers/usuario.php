@@ -42,7 +42,7 @@ class Usuario extends Controller{
 
        Acesso::checkLogin();
 
-       $this->viewDash('moedas/cotacoesFavoritas');
+       $this->viewDash('moedas/cotacoesGerais');
     }
 
 

@@ -1,5 +1,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo URL_BASE; ?>Assets/css/especifica.css">
 
+<label>Buscar por moeda específica</label>
+
 <div class="formulario">
 	<form class="form-busca" action="<?php echo URL_BASE; ?>moeda/especificas" method="POST">
 		<select class="moeda-busca" name="codigoMoeda">
