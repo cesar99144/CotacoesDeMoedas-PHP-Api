@@ -9,7 +9,7 @@
     </blockquote>
  <h3>Instalação: </h3>
 <blockquote>
-    clonar este repositório para a pasta do seu servidor (xampp, wamp,lamp ou algum de sua preferência) e criar um virtual host para esse projeto (devido ao sistema de rotas se faz necessário), e executar apartir do localhost. Caso utiliza o servidor do php (indicado para esse projeto devido ao sistema de rotas) basta navegar até a pasta do projeto pelo cmd e digitar o comando: <code>php -S localhost:8080</code>. Também é necessário alterar os Parâmetros de conexão na pasta <code>App/Core/Model</code> e importar o arquivo <code>db/cotacoesMoedas.sql para o seu mysql</code>
+    clonar este repositório para a pasta do seu servidor (xampp, wamp,lamp ou algum de sua preferência) e criar um virtual host para esse projeto (devido ao sistema de rotas se faz necessário), e executar apartir do localhost. Caso utiliza o servidor do php (indicado para esse projeto devido ao sistema de rotas) basta navegar até a pasta do projeto pelo cmd e digitar o comando: <code>php -S localhost:8080</code>. Caso utilize o laragon basta apenas importar para pasta www e executar. Também é necessário alterar os Parâmetros de conexão na pasta <code>App/Core/Model</code> e importar o arquivo <code>db/cotacoesMoedas.sql para o seu mysql</code>
 
 </blockquote>
 
